@@ -1,0 +1,50 @@
+"""x=[2,9,16,3,7,15]
+y=[9,6,1,5]
+z=[1,4,10,9]
+flag=0
+if len(y)==len(z):
+    for i in range(len(x)):
+         if x[i]>10:
+             flag=1
+             print("greather than 10")
+             break 
+         else:
+            if y[i] in x:
+              ind=x.index(y[i])
+              x[ind]=z[i]
+       
+            """
+#            String module )(core module )
+#s="jkfds vdv dfg nrg rngdfd"
+"""import string as s
+print(s.whitespace)"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

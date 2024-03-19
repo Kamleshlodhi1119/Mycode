@@ -1,0 +1,4 @@
+Student Name: cd "c:\Users\hp\Desktop\Mycode\Cppcode\" ; if ($?Roll Number: 6422204
+Branch: )
+Paper Name: {
+Paper Marks: 0
