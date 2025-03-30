@@ -1,0 +1,373 @@
+
+/*
+    1. Base CSS
+*/
+:root {
+    --primary-color: #333333;
+    --secondary-color: #ee5f38;
+    --secondary-color2: #ed1d24;
+    --hover-color: #f6b924;
+    --yellow-color: #ff9800;
+    --foreground-color: #333333;
+    --foreground-sub-color: #636363;
+    --body-text-color: #000000;
+    --text-white-color: #fff;
+    --body-background-color: #fff;
+    --bg-offwhite-color: #eff3f7;
+    --bg-gray-color: #f5f8ff;
+    --bg-black-color: #000000;
+    --bg-light-dark-color: #1a1818;
+    --border-color: #d9d9d9;
+    --rubik-fonts: "Rubik", sans-serif;
+    --body-font-size: 1.4rem;
+    --body-font-weight: 400;
+    --body-line-height: 2.5rem;
+    --headings-weight: 700;
+    --transition: all 0.3s ease 0s;
+    --container-fluid-offset: 12rem;
+}
+
+
+/* Common Style */
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    font-size: 62.5%;
+    padding: 0;
+}
+
+body {
+    font-family: var(--rubik-fonts);
+    font-size: var(--body-font-size, 1.4rem);
+    font-weight: var(--body-font-weight);
+    font-style: normal;
+    line-height: var(--body-line-height, 2.5rem);
+    position: relative;
+    visibility: visible;
+    overflow-x: hidden;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        line-height: 2.4rem;
+    }
+}
+
+[data-aos="fade-up"] {
+    transform: translate3d(0, 40px, 0);
+    -webkit-transform: translate3d(0, 40px, 0);
+    -moz-transform: translate3d(0, 40px, 0);
+    -ms-transform: translate3d(0, 40px, 0);
+    -o-transform: translate3d(0, 40px, 0);
+}
+
+.tooltip {
+    font-size: 1.3rem;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-weight: 500;
+    margin: 0;
+    font-family: var(--rubik-fonts);
+}
+
+h1,
+.h1 {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+}
+
+@media only screen and (min-width: 480px) {
+    h1,
+    .h1 {
+        font-size: 2.3rem;
+        line-height: 3.3rem;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    h1,
+    .h1 {
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1,
+    .h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    h1,
+    .h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    h1,
+    .h1 {
+        font-size: 4.5rem;
+        line-height: 5.5rem;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    h1,
+    .h1 {
+        font-size: 5.5rem;
+        line-height: 6.5rem;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    h1,
+    .h1 {
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+@media only screen and (min-width: 768px) {
+    h2,
+    .h2 {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    h2,
+    .h2 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+h5,
+.h5 {
+    font-weight: 400;
+}
+
+h6,
+.h6 {
+    font-weight: 400;
+}
+
+p,
+.p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--foreground-sub-color);
+}
+
+@media only screen and (min-width: 1200px) {
+    p,
+    .p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    p,
+    .p {
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+    }
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a,
+button {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+}
+
+a,
+button,
+img,
+input,
+textarea {
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+}
+
+*:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+a {
+    color: var(--foreground-color);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+button,
+input[type="submit"] {
+    cursor: pointer;
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    line-height: var(--body-line-height);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+span {
+    display: inline-block;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+}
+
+label {
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    display: block;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    opacity: 1;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    opacity: 1;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul:last-child {
+    margin-bottom: 0;
+}
+
+li {
+    list-style: none;
+    line-height: 1;
+}
+
+hr {
+    border-top-width: 2px;
+}
+
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 576px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 992px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        overflow: hidden;
+    }
+}
+
+
